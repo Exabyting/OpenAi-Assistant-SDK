@@ -57,8 +57,9 @@ Add the following dependencies to your `pom.xml` (Maven):
 AssistantService assistantService = new AssistantService("YOUR_API_KEY_HERE");
 
 AssistantRequest request = new AssistantRequest();
-request.setName("My Assistant");
-request.setModel("gpt-4");
+request.name = "My Assistant";
+request.model = "gpt-4";
+request.instructions = "Provide helpful responses.";
 
 Assistant assistant = assistantService.createAssistant(request);
 System.out.println("Created Assistant ID: " + assistant.getId());
@@ -119,11 +120,11 @@ System.out.println("Run cancelled.");
 
 ```java
 ToolOutput toolOutput = new ToolOutput();
-toolOutput.setToolCallId("tool-call-id");
-toolOutput.setOutput("Tool response content");
+toolOutput.toolCallId("tool-call-id");
+toolOutput.output("Tool response content");
 
 SubmitToolOutputsRequest outputsRequest = new SubmitToolOutputsRequest();
-outputsRequest.setToolOutputs(Collections.singletonList(toolOutput));
+outputsRequest.toolOutputs(Collections.singletonList(toolOutput));
 
 runService.submitToolOutputs(thread.getId(), run.getId(), outputsRequest);
 System.out.println("Tool outputs submitted.");

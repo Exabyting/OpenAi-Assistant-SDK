@@ -21,15 +21,10 @@ Add the following dependencies to your `pom.xml` (Maven):
 ```xml
 <dependencies>
   <dependency>
-    <groupId>com.squareup.okhttp3</groupId>
-    <artifactId>okhttp</artifactId>
-    <version>4.9.3</version>
-  </dependency>
-  <dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.13.3</version>
-  </dependency>
+    <groupId>org.com</groupId>
+    <artifactId>OpenAI-SDK</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
 </dependencies>
 ```
 

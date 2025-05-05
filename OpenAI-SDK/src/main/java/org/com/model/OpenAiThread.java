@@ -2,6 +2,7 @@ package org.com.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class OpenAiThread {
 
     private String id;

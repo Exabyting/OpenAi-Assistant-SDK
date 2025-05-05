@@ -1,5 +1,6 @@
 package org.com.model;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RunRequest {
 
     @JsonProperty("assistant_id")

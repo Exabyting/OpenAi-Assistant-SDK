@@ -30,4 +30,16 @@ public class MessageListResponse {
     public boolean isHasMore() {
         return hasMore;
     }
+
+    @Override
+    public String toString() {
+        return "MessageListResponse{" +
+                "object='" + object + '\'' +
+                ", data=" + data +
+                ", firstId='" + firstId + '\'' +
+                ", lastId='" + lastId + '\'' +
+                ", hasMore=" + hasMore +
+                '}';
+    }
+
 }

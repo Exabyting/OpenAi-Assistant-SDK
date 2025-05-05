@@ -1,6 +1,8 @@
 package org.com.model;
 
 public class RunRequest {
+
+    @JsonProperty("assistant_id")
     private String assistantId;
 
     public RunRequest(String assistantId) {

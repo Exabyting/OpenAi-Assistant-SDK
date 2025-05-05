@@ -13,4 +13,12 @@ public class Content {
     public Text getText() {
         return text;
     }
+
+    @Override
+    public String toString() {
+        return "Content{" +
+                "type='" + type + '\'' +
+                ", text=" + text +
+                '}';
+    }
 }

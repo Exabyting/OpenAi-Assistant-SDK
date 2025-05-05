@@ -2,6 +2,7 @@ package org.com.model;
 
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MessageListResponse {
     private String object;
     private List<Message> data;

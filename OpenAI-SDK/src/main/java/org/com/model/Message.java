@@ -3,6 +3,7 @@ package org.com.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Message {
     private String id;
     private String object;

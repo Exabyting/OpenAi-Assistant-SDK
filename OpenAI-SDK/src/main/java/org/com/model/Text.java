@@ -8,4 +8,11 @@ public class Text {
     public String getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return "Text{" +
+                "value='" + value + '\'' +
+                '}';
+    }
 }

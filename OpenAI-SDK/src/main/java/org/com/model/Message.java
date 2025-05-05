@@ -54,4 +54,18 @@ public class Message {
     public List<Content> getContent() {
         return content;
     }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id='" + id + '\'' +
+                ", object='" + object + '\'' +
+                ", createdAt=" + createdAt +
+                ", assistantId='" + assistantId + '\'' +
+                ", threadId='" + threadId + '\'' +
+                ", runId='" + runId + '\'' +
+                ", role='" + role + '\'' +
+                ", content=" + content +
+                '}';
+    }
 }

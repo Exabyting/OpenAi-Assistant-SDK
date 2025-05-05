@@ -2,6 +2,7 @@ package org.com.model;
 
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SubmitToolOutputsRequest {
     private List<ToolOutput> toolOutputs;
 

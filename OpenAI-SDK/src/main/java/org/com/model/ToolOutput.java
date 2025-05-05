@@ -1,5 +1,6 @@
 package org.com.model;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ToolOutput {
     private String toolCallId;
     private String output;

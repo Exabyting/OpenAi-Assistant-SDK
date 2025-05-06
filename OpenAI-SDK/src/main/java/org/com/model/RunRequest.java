@@ -6,10 +6,6 @@ public class RunRequest {
     @JsonProperty("assistant_id")
     private String assistantId;
 
-    public RunRequest(String assistantId) {
-        this.assistantId = assistantId;
-    }
-
     public String getAssistantId() {
         return assistantId;
     }

@@ -17,6 +17,8 @@ A clean and extensible Java SDK to integrate with OpenAI's Assistants v2 API. Th
 ## 🔧 Installation
 
 Add the following dependencies to your `pom.xml` (Maven):
+For Using locally first keep this module in same folder and make jar by using mvn clean install .
+Then use this dependency on your application `pom.xml`. 
 
 ```xml
 <dependencies>
@@ -29,6 +31,8 @@ Add the following dependencies to your `pom.xml` (Maven):
 ```
 
 ---
+
+If want to try demo Application then just apply mvn clean install on OpenAi-SDK module and then run demo application with your api key
 
 ## 🧠 SDK Features Overview
 
@@ -49,39 +53,38 @@ Add the following dependencies to your `pom.xml` (Maven):
 ### 🔹 1. Create an Assistant
 
 ```java
-AssistantService assistantService = new AssistantService("YOUR_API_KEY_HERE");
+AssistantRequest assistantRequest = new AssistantRequest();
+assistantRequest.setInstructions("You are a helpful assistant that answers questions clearly and concisely.");
+assistantRequest.setModel("gpt-4");
+assistantRequest.setName("SmartHelper");
+Assistant assistant = openAiClient.createAssistant(assistantRequest);
 
-AssistantRequest request = new AssistantRequest();
-request.name = "My Assistant";
-request.model = "gpt-4";
-request.instructions = "Provide helpful responses.";
-
-Assistant assistant = assistantService.createAssistant(request);
 System.out.println("Created Assistant ID: " + assistant.getId());
 ```
 
 ### 🔹 2. Create a Thread
 
 ```java
-ThreadService threadService = new ThreadService("YOUR_API_KEY_HERE");
-OpenAiThread thread = threadService.createThread();
+OpenAiThread thread = openAiClient.createThread();
 System.out.println("Thread ID: " + thread.getId());
 ```
 
 ### 🔹 3. Add a Message to the Thread
 
 ```java
-MessageService messageService = new MessageService("YOUR_API_KEY_HERE");
-
-MessageRequest messageRequest = new MessageRequest("Hello, Assistant!");
-Message message = messageService.createMessage(thread.getId(), messageRequest);
+MessageRequest messageRequest = new MessageRequest();
+messageRequest.setRole("user");
+messageRequest.setContent("Hi, is there any one for help me !");
+openAiClient.createMessage(thread.getId(), messageRequest);
 System.out.println("Message ID: " + message.getId());
 ```
 
 ### 🔹 4. Retrieve Messages from a Thread
 
 ```java
-MessageListResponse response = messageService.getMessages(thread.getId());
+MessageListResponse messages = openAiClient.getMessages(thread.getId());
+System.out.println(messages);
+
 response.getMessages().forEach(m -> 
   System.out.println(m.getContent().get(0).getText().getValue())
 );
@@ -90,24 +93,25 @@ response.getMessages().forEach(m ->
 ### 🔹 5. Start a Run
 
 ```java
-RunService runService = new RunService("YOUR_API_KEY_HERE");
+openAiClient.getRunDetails(thread.getId(), run.getId());
 
 RunRequest runRequest = new RunRequest(assistant.getId());
 Run run = runService.createRun(thread.getId(), runRequest);
 System.out.println("Run ID: " + run.getId());
+
 ```
 
 ### 🔹 6. Check Run Status
 
 ```java
-Run runStatus = runService.retrieveRun(thread.getId(), run.getId());
-System.out.println("Run Status: " + runStatus.getStatus());
+Run runDetails = openAiClient.getRunDetails(thread.getId(), run.getId());
+System.out.println("Run Status: " + runDetails.getStatus());
 ```
 
 ### 🔹 7. Cancel a Run
 
 ```java
-runService.cancelRun(thread.getId(), run.getId());
+openAiClient.cancelRun(thread.getId(), run.getId());
 System.out.println("Run cancelled.");
 ```
 
@@ -128,7 +132,7 @@ System.out.println("Tool outputs submitted.");
 ### 🔹 9. Delete a Thread
 
 ```java
-threadService.deleteThread(thread.getId());
+openAiClient.deleteThread(thread.getId());
 System.out.println("Thread deleted.");
 ```
 

@@ -53,6 +53,7 @@ If want to try demo Application then just apply mvn clean install on OpenAi-SDK 
 ### 🔹 1. Create an Assistant
 
 ```java
+OpenAiClient openAiClient = new OpenAiClient("YOUR_API_KEY_HERE");
 AssistantRequest assistantRequest = new AssistantRequest();
 assistantRequest.setInstructions("You are a helpful assistant that answers questions clearly and concisely.");
 assistantRequest.setModel("gpt-4");

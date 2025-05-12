@@ -4,7 +4,7 @@
 
     <groupId>com.exabyting.ai.sdk</groupId>
     <artifactId>openai-assistant-sdk</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -45,7 +45,7 @@
         <connection>scm:git:git://github.com/Exabyting/OpenAi-Assistant-SDK.git</connection>
         <developerConnection>scm:git:git@github.com:Exabyting/OpenAi-Assistant-SDK.git</developerConnection>
         <url>https://github.com/Exabyting/OpenAi-Assistant-SDK</url>
-        <tag>openai-assistant-sdk-1.0.0</tag>
+        <tag>tag 1.0.0</tag>
     </scm>
 
 

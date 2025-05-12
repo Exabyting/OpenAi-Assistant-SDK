@@ -42,10 +42,10 @@
     </build>
 
     <scm>
-        <connection>scm:git:git://github.com/exabyting/openai-assistant-sdk.git</connection>
-        <developerConnection>scm:git:ssh://github.com:exabyting/openai-assistant-sdk.git</developerConnection>
-        <url>https://github.com/exabyting/openai-assistant-sdk</url>
-        <tag>openai-assistant-sdk</tag>
+        <connection>scm:git:git://github.com/Exabyting/OpenAi-Assistant-SDK.git</connection>
+        <developerConnection>scm:git:git@github.com:Exabyting/OpenAi-Assistant-SDK.git</developerConnection>
+        <url>https://github.com/Exabyting/OpenAi-Assistant-SDK</url>
+        <tag>HEAD</tag>
     </scm>
 
 

@@ -4,13 +4,30 @@
 
     <groupId>com.exabyting.ai.sdk</groupId>
     <artifactId>openai-assistant-sdk</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>ashikur</id>
+            <name>Ashikur Rahman</name>
+            <email>ashikur@exabyting.com</email>
+        </developer>
+    </developers>
+
 
     <dependencies>
         <dependency>
@@ -27,6 +44,7 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -38,6 +56,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
@@ -47,6 +66,7 @@
         <url>https://github.com/Exabyting/OpenAi-Assistant-SDK</url>
         <tag>tag 1.0.0</tag>
     </scm>
+
 
 
 </project>

@@ -4,13 +4,17 @@
 
     <groupId>com.exabyting.ai.sdk</groupId>
     <artifactId>openai-assistant-sdk</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <name>OpenAI Assistant SDK</name>
+    <description>A Java SDK for integrating OpenAI models and services with an easy-to-use API.</description>
+    <url>https://github.com/Exabyting/OpenAi-Assistant-SDK</url>
 
     <licenses>
         <license>
@@ -25,6 +29,8 @@
             <id>ashikur</id>
             <name>Ashikur Rahman</name>
             <email>ashikur@exabyting.com</email>
+            <organization>Exabyting</organization>
+            <organizationUrl>https://exabyting.com</organizationUrl>
         </developer>
     </developers>
 
@@ -66,6 +72,14 @@
         <url>https://github.com/Exabyting/OpenAi-Assistant-SDK</url>
         <tag>openai-assistant-sdk-1.0.0</tag>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+        </repository>
+    </distributionManagement>
 
 
 

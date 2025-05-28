@@ -7,10 +7,7 @@ public class AssistantRequest {
     public String name;
     public String model;
     public List<Tool> tools;
-
-    public static class Tool {
-        public String type;
-    }
+    public ToolResources tool_resources;
 
     public String getInstructions() {
         return instructions;
@@ -34,6 +31,14 @@ public class AssistantRequest {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public ToolResources getTool_resources() {
+        return tool_resources;
+    }
+
+    public void setTool_resources(ToolResources tool_resources) {
+        this.tool_resources = tool_resources;
     }
 
     public List<Tool> getTools() {

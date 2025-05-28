@@ -1,7 +1,7 @@
 package org.com.demo;
 
-import org.com.OpenAiClient;
-import org.com.model.*;
+import com.exabyting.ai.sdk.OpenAiClient;
+import com.exabyting.ai.sdk.model.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.

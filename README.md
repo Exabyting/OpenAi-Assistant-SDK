@@ -22,10 +22,10 @@ Then use this dependency on your application `pom.xml`.
 
 ```xml
 <dependencies>
-  <dependency>
-    <groupId>org.com</groupId>
-    <artifactId>OpenAI-SDK</artifactId>
-    <version>1.0-SNAPSHOT</version>
+<dependency>
+    <groupId>com.exabyting.ai.sdk</groupId>
+    <artifactId>openai-assistant-sdk</artifactId>
+    <version>1.0.1</version>
 </dependency>
 </dependencies>
 ```

@@ -16,9 +16,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.com</groupId>
-            <artifactId>OpenAI-SDK</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.exabyting.ai.sdk</groupId>
+            <artifactId>openai-assistant-sdk</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
